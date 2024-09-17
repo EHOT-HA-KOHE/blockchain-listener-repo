@@ -1,0 +1,295 @@
+{
+    "4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump": {
+        "response_data": {
+            "schemaVersion": "1.0.0",
+            "pairs": [
+                {
+                    "chainId": "solana",
+                    "dexId": "raydium",
+                    "url": "https://dexscreener.com/solana/4n3use7fhzn1x4mzrcwjbq767isjm1jq4yd3shvpjadc",
+                    "pairAddress": "4n3use7fhZN1X4MzRCwjbQ767iSJm1jq4YD3sHvPJaDC",
+                    "baseToken": {
+                        "address": "4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump",
+                        "name": "MAUI",
+                        "symbol": "MAUI"
+                    },
+                    "quoteToken": {
+                        "address": "So11111111111111111111111111111111111111112",
+                        "name": "Wrapped SOL",
+                        "symbol": "SOL"
+                    },
+                    "priceNative": "0.000003009",
+                    "priceUsd": "0.0003941",
+                    "txns": {
+                        "m5": {
+                            "buys": 410,
+                            "sells": 303
+                        },
+                        "h1": {
+                            "buys": 6506,
+                            "sells": 5404
+                        },
+                        "h6": {
+                            "buys": 10237,
+                            "sells": 8385
+                        },
+                        "h24": {
+                            "buys": 10237,
+                            "sells": 8385
+                        }
+                    },
+                    "volume": {
+                        "h24": 3326757.61,
+                        "h6": 3326757.61,
+                        "h1": 2423417.96,
+                        "m5": 135591.55
+                    },
+                    "priceChange": {
+                        "m5": -12.19,
+                        "h1": -14.12,
+                        "h6": 641,
+                        "h24": 641
+                    },
+                    "liquidity": {
+                        "usd": 65079.08,
+                        "base": 84023120,
+                        "quote": 244.1019
+                    },
+                    "fdv": 394105,
+                    "pairCreatedAt": 1718968854000,
+                    "info": {
+                        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/solana/4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump.png",
+                        "websites": [],
+                        "socials": [
+                            {
+                                "type": "twitter",
+                                "url": "https://x.com/mauibinance"
+                            },
+                            {
+                                "type": "telegram",
+                                "url": "https://t.me/Mauisolana"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "chainId": "solana",
+                    "dexId": "meteora",
+                    "url": "https://dexscreener.com/solana/4w4amznvwzwgd7cmpjins5bfuvbbdefmnaivzvvvtorh",
+                    "pairAddress": "4W4AMZNvWZwgD7cmPjiNS5bfUVBbdefMNaiVZVvvToRh",
+                    "labels": [
+                        "DLMM"
+                    ],
+                    "baseToken": {
+                        "address": "4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump",
+                        "name": "MAUI",
+                        "symbol": "MAUI"
+                    },
+                    "quoteToken": {
+                        "address": "So11111111111111111111111111111111111111112",
+                        "name": "Wrapped SOL",
+                        "symbol": "SOL"
+                    },
+                    "priceNative": "0.0003036",
+                    "priceUsd": "0.04018",
+                    "txns": {
+                        "m5": {
+                            "buys": 0,
+                            "sells": 0
+                        },
+                        "h1": {
+                            "buys": 0,
+                            "sells": 3
+                        },
+                        "h6": {
+                            "buys": 0,
+                            "sells": 3
+                        },
+                        "h24": {
+                            "buys": 0,
+                            "sells": 3
+                        }
+                    },
+                    "volume": {
+                        "h24": 463.25,
+                        "h6": 463.25,
+                        "h1": 463.25,
+                        "m5": 0
+                    },
+                    "priceChange": {
+                        "m5": 0,
+                        "h1": -20.3,
+                        "h6": -20.3,
+                        "h24": -20.3
+                    },
+                    "liquidity": {
+                        "usd": 40078.23,
+                        "base": 997297,
+                        "quote": 0.0002762
+                    },
+                    "fdv": 40186794,
+                    "pairCreatedAt": 1718971421000,
+                    "info": {
+                        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/solana/4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump.png",
+                        "websites": [],
+                        "socials": [
+                            {
+                                "type": "twitter",
+                                "url": "https://x.com/mauibinance"
+                            },
+                            {
+                                "type": "telegram",
+                                "url": "https://t.me/Mauisolana"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "chainId": "solana",
+                    "dexId": "meteora",
+                    "url": "https://dexscreener.com/solana/7blehxbwssiuuv9mld6rxkqaouvox8hxmckwyfwfrfnn",
+                    "pairAddress": "7bLEHxbwSsiUUv9mLD6RXKQaouvoX8hxMcKwyfWFrFnn",
+                    "labels": [
+                        "DLMM"
+                    ],
+                    "baseToken": {
+                        "address": "4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump",
+                        "name": "MAUI",
+                        "symbol": "MAUI"
+                    },
+                    "quoteToken": {
+                        "address": "So11111111111111111111111111111111111111112",
+                        "name": "Wrapped SOL",
+                        "symbol": "SOL"
+                    },
+                    "priceNative": "0.000003039",
+                    "priceUsd": "0.0003985",
+                    "txns": {
+                        "m5": {
+                            "buys": 5,
+                            "sells": 10
+                        },
+                        "h1": {
+                            "buys": 95,
+                            "sells": 155
+                        },
+                        "h6": {
+                            "buys": 95,
+                            "sells": 155
+                        },
+                        "h24": {
+                            "buys": 95,
+                            "sells": 155
+                        }
+                    },
+                    "volume": {
+                        "h24": 20682.76,
+                        "h6": 20682.76,
+                        "h1": 20682.76,
+                        "m5": 48.97
+                    },
+                    "priceChange": {
+                        "m5": -11.99,
+                        "h1": -22.3,
+                        "h6": -22.3,
+                        "h24": -22.3
+                    },
+                    "liquidity": {
+                        "usd": 256.01,
+                        "base": 570063,
+                        "quote": 0.2199
+                    },
+                    "fdv": 398511,
+                    "pairCreatedAt": 1718971384000,
+                    "info": {
+                        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/solana/4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump.png",
+                        "websites": [],
+                        "socials": [
+                            {
+                                "type": "twitter",
+                                "url": "https://x.com/mauibinance"
+                            },
+                            {
+                                "type": "telegram",
+                                "url": "https://t.me/Mauisolana"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "chainId": "solana",
+                    "dexId": "meteora",
+                    "url": "https://dexscreener.com/solana/73hmrmd5eju1s6juzldsz693hojy5trdgwhucxnbi1ej",
+                    "pairAddress": "73HmRmD5EJU1s6juzLdsz693HoJy5trdGWHucXNbi1EJ",
+                    "labels": [
+                        "DYN"
+                    ],
+                    "baseToken": {
+                        "address": "4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump",
+                        "name": "MAUI",
+                        "symbol": "MAUI"
+                    },
+                    "quoteToken": {
+                        "address": "So11111111111111111111111111111111111111112",
+                        "name": "Wrapped SOL",
+                        "symbol": "SOL"
+                    },
+                    "priceNative": "0.000002335",
+                    "priceUsd": "0.0003081",
+                    "txns": {
+                        "m5": {
+                            "buys": 0,
+                            "sells": 0
+                        },
+                        "h1": {
+                            "buys": 0,
+                            "sells": 0
+                        },
+                        "h6": {
+                            "buys": 35,
+                            "sells": 27
+                        },
+                        "h24": {
+                            "buys": 35,
+                            "sells": 27
+                        }
+                    },
+                    "volume": {
+                        "h24": 188.01,
+                        "h6": 188.01,
+                        "h1": 0,
+                        "m5": 0
+                    },
+                    "priceChange": {
+                        "m5": 0,
+                        "h1": 0,
+                        "h6": 61.58,
+                        "h24": 61.58
+                    },
+                    "liquidity": {
+                        "usd": 182.15,
+                        "base": 295441,
+                        "quote": 0.6903
+                    },
+                    "fdv": 308195,
+                    "pairCreatedAt": 1718970219000,
+                    "info": {
+                        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/solana/4cbk4UzG5WbJyuwpqXoQAL4H2iNXroPNVUqtbHK1pump.png",
+                        "websites": [],
+                        "socials": [
+                            {
+                                "type": "twitter",
+                                "url": "https://x.com/mauibinance"
+                            },
+                            {
+                                "type": "telegram",
+                                "url": "https://t.me/Mauisolana"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "status_code": 200
+    }
+}

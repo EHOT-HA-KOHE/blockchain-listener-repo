@@ -1,0 +1,13 @@
+import requests
+
+def fetch_json(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        response.raise_for_status()
+
+url = "https://bafkreieeboyvolysiq7r5pmu45ul2sspkzgt7csco6473pwiqntir5zfg4.ipfs.nftstorage.link/"
+json_data = fetch_json(url)
+
+print(json_data)

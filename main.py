@@ -6,7 +6,7 @@ import time
 
 from dotenv import load_dotenv
 
-from web3.exceptions import MismatchedABI
+from web3.exceptions import MismatchedABI   # dont del need for filterwarnings
 
 from src.loguru_config import logger
 from src.collectors import (RadiumPriceCollector,

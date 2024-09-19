@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime
 
 from websockets import ConnectionClosedError
 
@@ -68,9 +69,9 @@ class RadiumPriceCollector(TokenPriceCollector):
 
         return token_mint
 
-    async def process_new_token_by_signature(self, signature: str):
+    async def process_new_token_by_signature(self, signature: str, created_at: datetime):
         mint = self.get_mint_from_signature(signature)
-        self.save_token(mint, self.dex_name, self.network)
+        self.save_token(mint, self.dex_name, self.network, created_at)
 
     async def listen_new_tokens(self):
         while True:
@@ -85,7 +86,7 @@ class RadiumPriceCollector(TokenPriceCollector):
                         responses = await websocket.recv()
                         if 'InitializeInstruction' in str(responses):
                             sig = responses[0].result.value.signature
-                            task = asyncio.create_task(self.process_new_token_by_signature(str(sig)))
+                            task = asyncio.create_task(self.process_new_token_by_signature(str(sig), datetime.now()))
                             logger.info(f'New listing signature: {sig}')
                     except ConnectionClosedError:
                         logger.error(f"=== CONNECTION CLOSED ===")

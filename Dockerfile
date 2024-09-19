@@ -1,9 +1,10 @@
-FROM python:3.12
-
-WORKDIR blockchain-listener
+FROM python:3.12-slim
 
 COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . /app
 
-CMD ["python3", "main.py"]
+WORKDIR /app
+
+CMD ["python", "main.py"]

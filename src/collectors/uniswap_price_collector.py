@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import asyncio
 
@@ -55,9 +56,9 @@ class UniswapPriceCollector(TokenPriceCollector):
     def get_address_from_event(self, event: AttributeDict) -> str | None:
         raise NotImplementedError
 
-    async def process_new_token(self, event: AttributeDict):
+    async def process_new_token(self, event: AttributeDict, created_at: datetime):
         address = self.get_address_from_event(event)
-        self.save_token(address, self.dex_name, self.network)
+        self.save_token(address, self.dex_name, self.network, created_at)
 
     async def listen_new_tokens(self, poll_interval=2):
         if self.event_filter is None:
@@ -65,7 +66,7 @@ class UniswapPriceCollector(TokenPriceCollector):
         while True:
             try:
                 for event in self.event_filter.get_new_entries():
-                    task = asyncio.create_task(self.process_new_token(event))
+                    task = asyncio.create_task(self.process_new_token(event, datetime.now()))
 
                 await asyncio.sleep(poll_interval)
 

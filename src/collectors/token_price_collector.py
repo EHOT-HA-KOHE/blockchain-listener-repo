@@ -1,7 +1,8 @@
 # from celery.exceptions import TimeoutError, TimeLimitExceeded
 
+from datetime import datetime
 from src.loguru_config import logger
-# from src.celery_tasks import wait_token_on_dexscreener, track_price     # todo
+from src.kafka_producer import save_add_alarm_about_new_pool_by_kafka
 
 
 class TokenPriceCollector:
@@ -11,28 +12,17 @@ class TokenPriceCollector:
     async def listen_new_tokens(self):
         raise NotImplementedError
 
-    def save_token(self, address: str, dex_name: str, network: str) -> bool:
+    def save_token(self, address: str, dex_name: str, network: str, created_at: datetime) -> bool:
         token_info = {
             'address': address, 
             'dex_name': dex_name, 
             'network': network,
+            'created_at': created_at,
         }
         print(f'{token_info} \n')
         try:
-            # res = wait_token_on_dexscreener.delay(address, dex_name, network)
-            # is_success = res.get()
-            is_success = True
-        # except TimeLimitExceeded as err:
-        #     logger.error(f"TimeLimitExceeded: {err}")
-        #     is_success = False
-        except TimeoutError as err:
-            logger.error(f"TimeoutError: {err}")
-            is_success = False
-
-        if is_success:
-            logger.info(f'write to db token_price in 0 delay')
-            for interval in self.intervals:
-                interval *= 60
-                # track_price.apply_async((address, interval, dex_name, network,), countdown=interval)
+            save_add_alarm_about_new_pool_by_kafka(address, dex_name, network, created_at)
             return True
-        return False
+        except Exception as err:
+            logger.error(f"TimeoutError: {err}")
+            return False

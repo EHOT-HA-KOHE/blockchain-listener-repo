@@ -13,13 +13,13 @@ from src.loguru_config import logger
 
 # Получение адреса брокера из переменных окружения
 # broker = os.getenv('KAFKA_BROKER', '127.0.0.1:9092')
-broker = '127.0.0.1:9092'
+broker = 'kafka:9092'
 
 # Конфигурация Kafka Producer
 producer = Producer({'bootstrap.servers': broker})
 
 
-def save_add_alarm_about_new_pool_by_kafka(address: str, dex_name: str, network: str, created_at: datetime) -> None:
+def save_add_alarm_about_new_pool_by_kafka(address: str, dex_name: str, network: str, created_at: str) -> None:
     # web_socket_topic = 'show-new-pool-ws'
     # save_to_db_topic = 'save-new-pool-to-db'
 

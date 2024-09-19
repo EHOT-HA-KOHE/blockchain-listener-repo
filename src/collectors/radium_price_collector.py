@@ -86,7 +86,7 @@ class RadiumPriceCollector(TokenPriceCollector):
                         responses = await websocket.recv()
                         if 'InitializeInstruction' in str(responses):
                             sig = responses[0].result.value.signature
-                            task = asyncio.create_task(self.process_new_token_by_signature(str(sig), datetime.now()))
+                            task = asyncio.create_task(self.process_new_token_by_signature(str(sig), datetime.now().isoformat()))
                             logger.info(f'New listing signature: {sig}')
                     except ConnectionClosedError:
                         logger.error(f"=== CONNECTION CLOSED ===")

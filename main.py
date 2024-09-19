@@ -55,13 +55,13 @@ if __name__ == '__main__':
     # ================================
 
     thread_1 = threading.Thread(target=run_async_function, args=(radium_collector.listen_new_tokens,))
-    thread_2 = threading.Thread(target=run_async_function, args=(eth_uniswap_v2_collector.listen_new_tokens,))
-    thread_3 = threading.Thread(target=run_async_function, args=(eth_uniswap_v3_collector.listen_new_tokens,))
+    # thread_2 = threading.Thread(target=run_async_function, args=(eth_uniswap_v2_collector.listen_new_tokens,))
+    # thread_3 = threading.Thread(target=run_async_function, args=(eth_uniswap_v3_collector.listen_new_tokens,))
     thread_4 = threading.Thread(target=run_async_function, args=(base_uniswap_v2_collector.listen_new_tokens,))
 
     thread_1.start()
-    thread_2.start()
-    thread_3.start()
+    # thread_2.start()
+    # thread_3.start()
     thread_4.start()
 
     try:

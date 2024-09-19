@@ -33,14 +33,12 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
       KAFKA_CLUSTERS_0_ZOOKEEPER: zookeeper:2181
 
-  # main:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile  # Указываем основной Dockerfile
-  #   volumes:
-  #     - .:/app  # монтируем проект внутрь контейнера
-  #   # command: python main.py  # запускаем основной файл
-  #   depends_on:
-  #     - kafka
-  #   environment:
-  #     - KAFKA_BROKER=kafka:9092
+  blockchain-listener:
+    build:
+      context: .  # Указываем, что Dockerfile находится в текущей директории
+    depends_on:
+      - kafka  # Зависимость от Kafka
+    environment:
+      - KAFKA_BROKER=kafka:9092  # Указываем адрес брокера Kafka
+    volumes:
+      - ./logs:/app/logs  # Монтируем директорию для логов

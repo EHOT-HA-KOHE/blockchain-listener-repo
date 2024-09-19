@@ -13,13 +13,7 @@ class TokenPriceCollector:
         raise NotImplementedError
 
     def save_token(self, address: str, dex_name: str, network: str, created_at: datetime) -> bool:
-        token_info = {
-            'address': address, 
-            'dex_name': dex_name, 
-            'network': network,
-            'created_at': created_at,
-        }
-        print(f'{token_info} \n')
+        logger.info(f'NewToken {address = }, {dex_name = }, {network = }, {created_at = } \n')
         try:
             save_add_alarm_about_new_pool_by_kafka(address, dex_name, network, created_at)
             return True

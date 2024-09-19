@@ -66,7 +66,7 @@ class UniswapPriceCollector(TokenPriceCollector):
         while True:
             try:
                 for event in self.event_filter.get_new_entries():
-                    task = asyncio.create_task(self.process_new_token(event, datetime.now()))
+                    task = asyncio.create_task(self.process_new_token(event, datetime.now().isoformat()))
 
                 await asyncio.sleep(poll_interval)
 

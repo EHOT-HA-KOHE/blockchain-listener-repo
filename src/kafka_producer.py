@@ -25,10 +25,10 @@ def save_add_alarm_about_new_pool_by_kafka(address: str, dex_name: str, network:
 
     # Формирование данных для отправки
     data = {
-        'address': address,
-        'dex_name': dex_name,
-        'network': network,
-        'created_at': created_at,
+        "address": address,
+        "dex_name": dex_name,
+        "network": network,
+        "created_at": created_at,
     }
 
     # Отправка данных в оба топика
